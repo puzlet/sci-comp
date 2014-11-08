@@ -1,4 +1,1 @@
-sci-comp
-========
-
-Puzlet for scientific computing.
+![](https://github.com/puzlet/sci-comp/blob/gh-pages/thumb.png)
