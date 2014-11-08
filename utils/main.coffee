@@ -1,18 +1,31 @@
 #********** Plotting in Eval box **********
+
+# Eval box plots use <a href="https://github.com/flot">flot</a>.
 x = linspace -1, 1, 100  # Vector
 f = rand() + 1  # Frequency
 y = sin(2*pi*f*x) # Vector expression
-plot x, y,
-    xlabel: "x"
-    ylabel: "y"
 
+# Define figure appearance.
+fig = figure
+    height: 400
+    series:
+        shadowSize: 10
+        color: "red"
+        lines: lineWidth: 2
+    xaxis:
+        min: -1.5
+        max: 1.5
+    yaxis:
+        min: -1.5
+        max: 1.5
+    grid:
+        backgroundColor: "#fef"
+    xlabel: "x-axis"
+    ylabel: "y-axis"
 
+# Then plot. Plot appears next to def above.
+plot x, y, fig:fig
 
-
-
-#********** Printing in HTML output area above **********
-print.clear()  # Clear print area above
-print y[0..19]  # Display first 20 elements of vector
 
 #********** Printing and plotting - output control **********
 nm.prettyPrint [1, 2]
